@@ -1,0 +1,136 @@
+// Sign-In button
+.btn-gray{
+  background-color: #EFF2FC;
+  padding: 11px 20px;
+  color: #33354D;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+
+  i{
+    margin-right: 10px;
+  }
+
+  &:hover{
+    background-color: black;
+    color:white;
+    transition: 0.3s;
+
+  }
+}
+
+
+// Sign-Upp button
+.btn-theme{
+  background-color: #6366F1;
+  padding: 11px 20px;
+  color:white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+
+  i{
+    margin-right: 10px;
+  }
+
+  &:hover{
+    background-color: black;
+    transition: 0.3s;
+
+  }
+}
+
+
+
+// Lightmode/darkmode button
+.btn-switch{
+    label{
+        margin-left: 5px;
+        color: #565973;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px; /* Justerad bredd för proportioner */
+        height: 24px; /* Önskad höjd */
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #565973;
+        transition: .4s;
+        border-radius: 24px; /* Gör den rundad */
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px; /* Justerad höjd för slider-knappen */
+        width: 20px; /* Justerad bredd för slider-knappen */
+        left: 2px; /* Mindre utrymme på sidorna */
+        bottom: 2px; /* Centrerad vertikalt */
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%; /* Gör den helt rund */
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        transform: translateX(16px); /* Justerad för att matcha den nya bredden */
+      }
+}
+
+
+.btn-theme-s {
+  background-color: #6366F1;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: black;
+    transition: 0.3s ease;
+  }
+
+}
+
+
+.btn-subscribe{
+  background-color: #6366F1;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.2); 
+  transition: 0.3s ease;
+
+  &:hover{
+    background-color: black;
+    transition: 0.3s ease;
+  }
+}

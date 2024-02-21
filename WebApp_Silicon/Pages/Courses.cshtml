@@ -1,0 +1,249 @@
+﻿@page
+@model WebApp_Silicon.Pages.CoursesModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+
+<section id="category-content">
+    <div class="container">
+        <div class="navigator">
+            <nav>
+                <i class="fa-solid fa-house"></i>
+                <a href="home.html" class="not-active">Home</a>
+                <i class="fa-solid fa-angles-right" class="is-active"></i>
+                <a href="courses.html">Courses</a>
+            </nav>
+        </div>
+        <div class="category-box">
+            <h1>Courses</h1>
+            <div class="category-filter-box">
+                <div class="dropdown">
+                    <button class="drop-btn">All categories<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Category 1</a>
+                        <a href="#">Category 2</a>
+                        <a href="#">Category 3</a>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search courses">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="courses">
+    <div class="container">
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/courses-fullstack.svg" alt="">
+            </div>
+            <div class="best-seller">
+                <p>Best Seller</p>
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>Fullstack Web Developer Course from Scratch</h2>
+                <p>By Robert Fox</p>
+                <h3>$12.50</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>220 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>94% (4.2K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/courses-html.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>HTML, CSS, JavaScript Web Developer</h2>
+                <p>By Jenny Wilson & Marvin McKinney</p>
+                <h3>$15.99</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>160 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>92% (3.1K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/courses-frontend.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>The Complete Front-End Web Development Course</h2>
+                <p>By Albert Flores</p>
+                <div class="pricing">
+                    <h3 class="sale-price">$9.99</h3>
+                    <h3 class="original-price">$44.99</h3>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>100 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>98% (2.7K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-iOS.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>iOS & Swift - The Complete iOS App Development Course</h2>
+                <p>By Marvin McKinney</p>
+                <h3>$15.99</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>160 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>92% (3.1K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-data-science.svg" alt="">
+            </div>
+            <div class="best-seller">
+                <p>Best Seller</p>
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>Data Science & Machine Learning with Python</h2>
+                <p>By Esther Howard</p>
+                <h3>$11.20</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>160 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>92% (3.1K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-css.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>Creative CSS Drawing Course: Make Art With CSS</h2>
+                <p>By Robert Fox</p>
+                <h3>$10.50</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>220 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>94% (4.2K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-blend.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>Blender Character Creator v2.0 for Video Games Design</h2>
+                <p>By Ralph Edwards</p>
+                <h3>$18.99</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>160 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>92% (3.1K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-2d.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>The Ultimate Guide to 2D Mobile Game Development with Unity</h2>
+                <p>By Albert Flores</p>
+                <div class="pricing">
+                    <h3 class="sale-price">$12.99</h3>
+                    <h3 class="original-price">$44.99</h3>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>100 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>98% (2.7K)</p>
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="image-box">
+                <img src="./images/course-jmeter.svg" alt="">
+            </div>
+            <div class="save-course">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div class="course-content">
+                <h2>Learn JMETER from Scratch on Live Apps-Performance Testing</h2>
+                <p>By Jenny Wilson</p>
+                <h3>$14.50</h3>
+                <div class="line"></div>
+            </div>
+            <div class="feedback-box">
+                <i class="fa-regular fa-clock"></i>
+                <p>160 hours</p>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>92% (3.1K)</p>
+            </div>
+        </div>
+        <div class="pagination">
+            <p>-ska kunna bläddra sida-</p>
+        </div>
+    </div>
+</section>
+
+<section id="get-started">
+    <div class="container">
+        <div class="content">
+            <img src="~/images/woman-desk.svg" alt="woman-desktop" />
+            <h3>Ready to get started?</h3>
+            <div class="text-content">
+                <h2>Take Your Skills to the<br>Next Level</h2>
+            </div>
+            <a class="btn-work-with-us" href="#">Work with us</a>
+        </div>
+    </div>
+</section>

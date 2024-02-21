@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+#light-dark{
+    padding-bottom: 100px;
+    background-color: white;
+    position: relative;
+
+
+    .dark-content{
+        width: 50%;
+        background-color: #0B0F19;
+        min-height: 1000px;
+    }
+
+    
+
+
+    .container{
+
+        .center-text{
+            display: flex;
+            justify-content: center; /* Centrerar innehållet horisontellt */
+            align-items: center; /* Centrerar innehållet vertikalt (om det behövs) */
+            text-align: center; /* Centrerar texten horisontellt */
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; /* Säkerställer att texten kan centreras korrekt */
+            font-size: 40px;
+            font-weight: 900;
+
+
+        }
+
+        .white-text{
+            color:white;
+
+        }
+
+
+        .black-text{
+            color: black;
+            margin-left: 80px;
+                    
+        }
+
+
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+}

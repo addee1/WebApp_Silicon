@@ -1,0 +1,117 @@
+#login{
+    padding-top: 100px;
+    padding-bottom: 150px;
+    background-color: white;
+
+
+    .container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+
+        .inlog-content{
+
+
+            .content{
+                
+
+                h1{
+                    font-size: 40px;
+                    font-weight: 900;
+                    color: #0B0F19;
+                }
+    
+
+                p{
+                    color: #565973;
+                    margin-top: 20px;
+                }
+
+
+                a{
+                    text-decoration: none;
+                }
+            }
+    
+
+            .form-content{
+                margin-top: 30px;
+    
+
+                .input-text-email{
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    
+                }
+    
+                
+                .input-text-password{
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    margin-top: 20px;
+                }
+    
+
+                #email-input, #password-input{
+                    display: block;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-right: 10px;
+                    border-radius: 5px;
+                    width: 100%;
+                    border: 1px solid #D4D7E5;
+                    
+                }
+    
+    
+                .checkbox-box{
+                    margin-top: 30px;
+                    display: flex;
+                    vertical-align: center;
+    
+
+                    label{
+                        margin-left: 10px;
+                        font-weight: 400;
+                    } 
+                }
+    
+
+                .button-box{
+                    margin-top: 30px;
+
+
+                    .center-link{
+                        text-align: center;
+
+                        
+                        #forgot-password{
+                            display: inline-block;
+                            margin-top: 25px;
+                            text-align: center;
+                            font-weight: 600;
+                            text-decoration: none;
+                           
+                        }
+                    }
+                    
+                    
+                    #btn-sign-in{
+                        padding: 10px;
+                        padding-left: 175px;
+                        padding-right: 175px;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        width: 100%;
+                        background-color: #6366F1;
+                    }
+                }
+            }
+        }  
+    }
+}

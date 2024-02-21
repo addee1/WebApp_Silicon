@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+#manage-your-work {
+    background-color: white;
+    font-family: 'Manrope', sans-serif;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        img {
+            width: 100%;
+        }
+
+
+        .content {
+            width: 50%; // adjust width as per your design requirement
+            margin-left: 90px;
+
+
+            h2 {
+                color: #333;
+                font-size: 40px;
+                font-weight: 900;
+                margin-bottom: 30px;
+            }
+
+
+            .text-box {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                i {
+                    font-size: 1.5rem;
+                    color: #6366F1;
+                    margin-right: 10px;
+                }
+                p {
+                    color: #9397AD;
+                    font-size: 1rem;
+                    margin: 0; // Ta bort marginal om det finns någon
+                    line-height: 1.5; // Detta kan justeras för att passa din design
+                }
+            }
+
+            .btn-theme-s{
+                margin-top: 30px;
+
+
+                i{
+                    margin-left: 10px;
+                }
+
+            }
+
+           
+        }
+    }
+}
+  

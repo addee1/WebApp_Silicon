@@ -1,0 +1,246 @@
+﻿@page
+@using WebApp_Silicon.Pages.Components
+@model WebApp_Silicon.Pages.IndexModel
+@{
+    ViewData["Title"] = "Overview";
+}
+
+
+<section id="showcase">
+    <img class="background-image" src="./images/showcase-taskmaster.svg" alt="dashboard">
+    <div class="container">
+        <div class="content">
+            <h1>Task Management<br>Assistant You<br>Gonna Love</h1>
+            <p>We offer you a new generation of task management system.<br>Plan, manage & track all your tasks in one flexible tool.</p>
+            <a class="btn-theme-s" href="#">Get started for free</a>
+            <h6>Largest companies use our tool to work efficiently</h6>
+            <div class="brands">
+                @if(Model.Brands != null)
+                {
+                    @foreach (var brand in Model.Brands)
+                    {
+                        <img src="@brand" alt="brand-logo-1">
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="features">
+    <div class="container">
+        <div class="content">
+            <h1>What Do You Get with Our Tool?</h1>
+            <p>Make sure all your tasks are organized so you can set the priorities and focus<br>on important.</p>
+        </div>
+        <div class="info-boxes">
+            <div class="box" id="box-1">
+                <i class="fa-regular fa-comments"></i>
+                <h3>Comments on Tasks</h3>
+                <p>Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+            </div>
+            <div class="box" id="box-2">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Tasks Analytics</h3>
+                <p>Non imperdiet facilisis nulla tellus Morbi<br>scelerisque eget adipiscing vulputate.</p>
+            </div>
+            <div class="box" id="box-3">
+                <i class="fa-solid fa-user-plus"></i>
+                <h3>Multiple Assignees</h3>
+                <p>A elementum, imperdiet enim, pretium etiam<br>facilisi in aenean quam mauris.</p>
+            </div>
+            <div class="box" id="box-4">
+                <i class="fa-regular fa-bell"></i>
+                <h3>Notifications</h3>
+                <p>Diam, suspendisse velit cras ac. Lobortis diam<br>volutpat, eget pellentesque viverra.</p>
+            </div>
+            <div class="box" id="box-5">
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Sections & Subtasks</h3>
+                <p>Mi feugiat hac id in. Sit elit placerat lacus nibh<br>lorem ridiculus lectus.</p>
+            </div>
+            <div class="box" id="box-6">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Data Security</h3>
+                <p>Aliquam malesuada neque eget elit nulla<br>vestibulum nunc cras.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="light-dark">
+    <div class="dark-content"></div>
+    <div class="light-content"></div>
+    <div class="container">
+        <img src="images/laptop.svg" alt="laptop">
+        <div class="center-text">
+            <span class="white-text">Switch Between </span>
+
+            <span class="black-text">Light & Dark Mode</span>
+        </div>
+    </div>
+</section>
+
+
+<section id="manage-your-work">
+    <div class="container">
+        <img src="./images/dashboard.svg" alt="dashboard">
+        <div class="content">
+            <h2>Manage Your Work</h2>
+            <div class="text-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Powerful project management</p>
+            </div>
+            <div class="text-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Transparent work management</p>
+            </div>
+            <div class="text-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Manage work & focus on the most important tasks</p>
+            </div>
+            <div class="text-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Track your progress with interactive charts</p>
+            </div>
+            <div class="text-box">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Easiest way to track time spent on tasks</p>
+            </div>
+            <a class="btn-theme-s" href="#">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+
+<section id="download">
+    <div class="container">
+        <img src="./images/phone.svg">
+        <div class="content">
+            <h1>Download Our App<br>for Any Devices:</h1>
+            <div class="content-box">
+                <h3>App Store</h3>
+                <img src="./images/rating.svg" alt="rating-stars">
+                <div class="text-boxes">
+                    <div class="text-box">
+                        <h2>Editor's Choice</h2>
+                        <p>rating 4.7, 187K+ reviews</p>
+                    </div>
+                    <img src="images/appstore.svg" alt="appstore-download">
+                </div>
+            </div>
+            <div class="content-box">
+                <h3>Google Play</h3>
+                <img src="./images/rating.svg" alt="rating-stars">
+                <div class="text-boxes">
+                    <div class="text-box">
+                        <h2>App of the Day</h2>
+                        <p>rating 4.8, 30K+ reviews</p>
+                    </div>
+                    <img src="images/googleplay.svg" alt="googleplay-download">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="intergrate">
+    <div class="container">
+        <h1>Integrate Top Work Tools</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus<br>
+            facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
+        </p>
+        <div class="content">
+            <div class="content-box">
+                <img src="./images/icons/google-icon.svg" alt="google-icon">
+                <p>Lorem magnis pretium sed curabitur nunc facilisi nunc cursus sagittis.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/zoom-icon.svg" alt="zoom-icon">
+                <p>In eget a mauris quis. Tortor dui tempus quis integer est sit natoque placerat dolor.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/slack-icon.svg" alt="slack-icon">
+                <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/gmail-icon.svg" alt="gmail-icon">
+                <p>Rutrum interdum tortor, sed at nulla. A cursus bibendum elit purus cras praesent.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/trello-icon.svg" alt="trello-icon">
+                <p>Congue pellentesque amet, viverra curabitur quam diam scelerisque fermentum urna.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/mailchimp-icon.svg" alt="mailchimp-icon">
+                <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/dropbox-icon.svg" alt="dropbox-icon">
+                <p>Ut in turpis consequat odio diam lectus elementum. Est faucibus blandit platea.</p>
+            </div>
+            <div class="content-box">
+                <img src="./images/icons/evernote-icon.svg" alt="evernote-icon">
+                <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="newsletter">
+    <div class="container">
+        <h1>Don't Want to Miss Anything?</h1>
+        <img src="./images/blue-line.svg" alt="blue-line">
+        <div class="content">
+            <h2>Sign up for<br>Newsletter</h2>
+            <div class="checkbox-content">
+                <div class="check-box-text">
+                    <input type="checkbox" id="daily-newspaper" name="daily-newspaper" value="">
+                    <label for="daily-newspaper"> Daily Newsletter</label>
+                </div>
+                <div class="check-box-text">
+                    <input type="checkbox" id="event-updates" name="vevent-updates" value="">
+                    <label for="event-updates"> Event Updates</label>
+                </div>
+            </div>
+            <div class="checkbox-content">
+                <div class="check-box-text">
+                    <input type="checkbox" id="advertising-updates" name="advertising-updates" value="">
+                    <label for="advertising-updates"> Advertising Updates</label>
+                </div>
+                <div class="check-box-text">
+                    <input type="checkbox" id="startups-weekly" name="startups-weekly" value="">
+                    <label for="startups-weekly"> Startups Weekly</label>
+                </div>
+            </div>
+            <div class="checkbox-content">
+                <div class="check-box-text">
+                    <input type="checkbox" id="week-in-review" name="week-in-review" value="">
+                    <label for="week-in-review"> Week in Review</label>
+                </div>
+                <div class="check-box-text">
+                    <input type="checkbox" id="podcasts" name="podcasts" value="">
+                    <label for="podcasts"> Podcasts</label>
+                </div>
+            </div>
+        </div>
+        <div class="sign-up-content">
+            <div class="sign-up-box">
+                <div class="sign-up">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input id="email" type="email" placeholder="Your Email" class="email-input">
+                </div>
+            </div>
+            <a href="#" class="btn-subscribe">Subscribe *</a>
+        </div>
+        <div class="policy-text">
+            <p id="blue-star">*</p>
+            <p>Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+body{
+    font-family: 'Manrope', sans-serif;
+}
+.wrapper{
+    height:100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    main{
+        background-color: rgb(230, 230, 230);
+    }
+
+}
+
+
+header{
+    font-family: 'Manrope', sans-serif;
+    padding: 15px;
+    
+
+    .container{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo menu switch buttons";
+        gap: 40px;
+        
+
+        #menu{
+
+
+            a{
+                color: #33354D;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 20px;
+                transition: 0.3s ease;
+
+                &:hover{
+                    color:#6366F1;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+
+        .btn-switch{
+            align-items: center;
+            vertical-align: center;
+        }
+
+
+        .account-buttons{
+        
+            .btn-gray{
+                margin-right: 10px;
+            }
+        }
+       
+    }
+}
