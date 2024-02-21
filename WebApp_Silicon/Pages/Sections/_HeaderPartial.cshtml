@@ -19,8 +19,8 @@
             <label>Dark</label>
         </div>
         <div class="account-buttons">
-            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ ClassName = "btn-gray", Link = "/login", Icon = "fa-solid fa-right-to-bracket", Text = "Sign In"}' />
-            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ ClassName = "btn-theme", Link = "#", Icon = "fa-solid fa-user-plus", Text = "Sign Up"}' />
+            <a class="btn-gray" asp-page="/signin"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></a>
+            <a class="btn-theme" asp-page="/signup"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
         </div>
     </div>
 </header>
