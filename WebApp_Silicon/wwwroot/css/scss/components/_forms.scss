@@ -1,32 +1,71 @@
-#sign-up{
-    .container{
+form {
+    display: grid;
+    width: 100%;
 
+    h1 {
+        color: #0B0F19;
+        font-weight: 900;
+    }
 
-        form{
+    p {
+        color: #565973;
+    }
 
+    .input-group {
+        display: grid;
+        margin: 1rem 0;
+    }
 
+    .checkbox-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
 
-            .content{
+        input[Type="checkbox"] {
+            height: 1.2rem;
+            width: 1.2rem;
+        }
 
+        label {
+            font-weight: 400;
+            margin: 0;
+        }
+    }
 
-                .input-group{
+    label {
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
 
+    input {
+        padding: 1rem;
+        border-radius: 5px !important;
+        border: 1px solid #B4B7C9;
 
+        &::placeholder {
+            opacity: 0.5;
+        }
 
-                    label {
+        &.input-validation-error {
+            border: 1px solid red !important;
 
-
-
-                    }
-
-                    input{
-
-
-
-
-                    }
-                }
+            &::placeholder {
+                color: red;
+                opacity: 0.5;
             }
+        }
+    }
+
+
+
+    span {
+        &.field-validation-error {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: red;
+            font-size: 0.8rem;
         }
     }
 }

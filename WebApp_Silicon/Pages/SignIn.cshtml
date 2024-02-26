@@ -5,31 +5,32 @@
 }
 
 
-<section id="login">
+<section id="signin">
     <div class="container">
-        <div class="inlog-content">
+
+        <form method="post" novalidate>
+            <h1>Welcome Back</h1>
+            <p>Don't have an account yet? <a asp-page="/SignUp">Sign up here</a></p>
+
             <div class="content">
-                <h1>Welcome Back</h1>
-                <p>Don't have an account yet?<a href="#"> Sign up here.</a></p>
+                <div id="form-email" class="input-group">
+                    <label asp-for="@Model.Form.Email"></label>
+                    <span asp-validation-for="@Model.Form.Email"></span>
+                    <input asp-for="@Model.Form.Email">
+                </div>
+                <div id="form-password" class="input-group">
+                    <label asp-for="@Model.Form.Password"></label>
+                    <span asp-validation-for="@Model.Form.Password"></span>
+                    <input asp-for="@Model.Form.Password">
+                </div>
+                <div id="form-remember" class="checkbox-group">
+                    <input asp-for="@Model.Form.RememberMe">
+                    <span asp-validation-for="@Model.Form.RememberMe"></span>
+                    <label asp-for="@Model.Form.RememberMe"></label>
+                </div>
+                <button id="form-button" class="btn-theme">Sign In</button>
+                <a id="forgot-password" asp-page="/forgot">Forgot your password?</a>
             </div>
-            <div class="form-content">
-                <form>
-                    <p class="input-text-email">Email</p>
-                    <input id="email-input" placeholder="Enter your email address">
-                    <p class="input-text-password">Password</p>
-                    <input id="password-input" type="password" placeholder="Enter your password">
-                    <div class="checkbox-box">
-                        <input id="checkbox-input" type="checkbox">
-                        <label for="rememberMe">Remember me</label>
-                    </div>
-                    <div class="button-box">
-                        <a id="btn-sign-in" href="#">Sign in</a>
-                        <div class="center-link">
-                            <a id="forgot-password" href="#">Forgot your password?</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+        </form>
     </div>
 </section>
