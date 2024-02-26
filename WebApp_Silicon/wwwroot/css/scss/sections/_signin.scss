@@ -1,32 +1,25 @@
-#signup {
+#signin {
     padding-top: 100px;
     background-color: white;
     height: 100%;
-    padding-bottom: 20px;
+
 
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 45%;
+        width: 30%;
 
         form {
 
             .content {
                 display: grid;
                 gap: 0 2rem;
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+                grid-template-columns: 1fr;
+                grid-template-areas: "email" "password" "confirm" "remember" "button" "forgot";
             }
 
-            #form-firstname {
-                grid-area: firstname;
-            }
-
-            #form-lastname {
-                grid-area: lastname;
-            }
 
             #form-email {
                 grid-area: email;
@@ -36,12 +29,8 @@
                 grid-area: password;
             }
 
-            #form-confirm {
-                grid-area: confirm;
-            }
-
-            #form-terms {
-                grid-area: terms;
+            #form-remember {
+                grid-area: remember;
             }
 
             #form-button {
@@ -51,6 +40,12 @@
 
             .btn-theme {
                 box-shadow: 0px 8px 18px -8px #6366F1;
+            }
+
+            #forgot-password {
+                grid-area: forgot;
+                text-align: center;
+                margin-top: 10px;
             }
         }
     }

@@ -860,89 +860,51 @@ footer .container p {
   transition: 0.3s ease;
 }
 
-#login {
+#signin {
   padding-top: 100px;
-  padding-bottom: 150px;
   background-color: white;
+  height: 100%;
 }
-#login .container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  align-items: center;
+#signin .container {
+  display: flex;
   justify-content: center;
-  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 30%;
 }
-#login .container .inlog-content .content h1 {
-  font-size: 40px;
-  font-weight: 900;
-  color: #0B0F19;
+#signin .container form .content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "email" "password" "confirm" "remember" "button" "forgot";
 }
-#login .container .inlog-content .content p {
-  color: #565973;
-  margin-top: 20px;
+#signin .container form #form-email {
+  grid-area: email;
 }
-#login .container .inlog-content .content a {
-  text-decoration: none;
+#signin .container form #form-password {
+  grid-area: password;
 }
-#login .container .inlog-content .form-content {
-  margin-top: 30px;
+#signin .container form #form-remember {
+  grid-area: remember;
 }
-#login .container .inlog-content .form-content .input-text-email {
-  font-weight: 700;
-  margin-bottom: 5px;
+#signin .container form #form-button {
+  grid-area: button;
+  margin-top: 1rem;
 }
-#login .container .inlog-content .form-content .input-text-password {
-  font-weight: 700;
-  margin-bottom: 5px;
-  margin-top: 20px;
+#signin .container form .btn-theme {
+  box-shadow: 0px 8px 18px -8px #6366F1;
 }
-#login .container .inlog-content .form-content #email-input, #login .container .inlog-content .form-content #password-input {
-  display: block;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid #D4D7E5;
-}
-#login .container .inlog-content .form-content .checkbox-box {
-  margin-top: 30px;
-  display: flex;
-  vertical-align: center;
-}
-#login .container .inlog-content .form-content .checkbox-box label {
-  margin-left: 10px;
-  font-weight: 400;
-}
-#login .container .inlog-content .form-content .button-box {
-  margin-top: 30px;
-}
-#login .container .inlog-content .form-content .button-box .center-link {
+#signin .container form #forgot-password {
+  grid-area: forgot;
   text-align: center;
-}
-#login .container .inlog-content .form-content .button-box .center-link #forgot-password {
-  display: inline-block;
-  margin-top: 25px;
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-}
-#login .container .inlog-content .form-content .button-box #btn-sign-in {
-  padding: 10px;
-  padding-left: 175px;
-  padding-right: 175px;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  width: 100%;
-  background-color: #6366F1;
+  margin-top: 10px;
 }
 
 #signup {
   padding-top: 100px;
   background-color: white;
   height: 100%;
+  padding-bottom: 20px;
 }
 #signup .container {
   display: flex;
@@ -978,4 +940,7 @@ footer .container p {
 #signup .container form #form-button {
   grid-area: button;
   margin-top: 1rem;
+}
+#signup .container form .btn-theme {
+  box-shadow: 0px 8px 18px -8px #6366F1;
 }
