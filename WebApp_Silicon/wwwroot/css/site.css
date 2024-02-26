@@ -31,6 +31,7 @@
   font-size: 14px;
   border-radius: 4px;
   transition: 0.3s ease;
+  border: none;
 }
 .btn-theme i {
   margin-right: 10px;
@@ -117,8 +118,65 @@
   transition: 0.3s ease;
 }
 
+form {
+  display: grid;
+  width: 100%;
+}
+form h1 {
+  color: #0B0F19;
+  font-weight: 900;
+}
+form p {
+  color: #565973;
+}
+form .input-group {
+  display: grid;
+  margin: 1rem 0;
+}
+form .checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+form .checkbox-group input[Type=checkbox] {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+form .checkbox-group label {
+  font-weight: 400;
+  margin: 0;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+form input {
+  padding: 1rem;
+  border-radius: 5px !important;
+  border: 1px solid #B4B7C9;
+}
+form input::placeholder {
+  opacity: 0.5;
+}
+form input.input-validation-error {
+  border: 1px solid red !important;
+}
+form input.input-validation-error::placeholder {
+  color: red;
+  opacity: 0.5;
+}
+form span.field-validation-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  font-size: 0.8rem;
+}
+
 body {
   font-family: "Manrope", sans-serif;
+  background-color: white;
 }
 
 .wrapper {
@@ -879,4 +937,45 @@ footer .container p {
   border-radius: 5px;
   width: 100%;
   background-color: #6366F1;
+}
+
+#signup {
+  padding-top: 100px;
+  background-color: white;
+  height: 100%;
+}
+#signup .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+}
+#signup .container form #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form #form-email {
+  grid-area: email;
+}
+#signup .container form #form-password {
+  grid-area: password;
+}
+#signup .container form #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form #form-terms {
+  grid-area: terms;
+}
+#signup .container form #form-button {
+  grid-area: button;
+  margin-top: 1rem;
 }
