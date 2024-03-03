@@ -133,19 +133,36 @@ form .input-group {
   display: grid;
   margin: 1rem 0;
 }
-form .checkbox-group {
+form .checkbox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
-form .checkbox-group input[Type=checkbox] {
+form .checkbox .field-validation-error {
+  width: 100%;
+}
+form .checkbox .field-validation-error::after {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  z-index: 10;
+  font-size: 2em;
+  display: block;
+  content: "⮿";
+}
+form .checkbox .input-group {
+  display: flex;
+  align-items: center;
+}
+form .checkbox .input-group #label-terms {
+  margin: 0 0 0 0.5rem;
+  font-weight: 400;
+}
+form .checkbox .input-group input[type=checkbox] {
   height: 1.2rem;
   width: 1.2rem;
-}
-form .checkbox-group label {
-  font-weight: 400;
-  margin: 0;
 }
 form label {
   margin-bottom: 5px;
@@ -166,12 +183,24 @@ form input.input-validation-error::placeholder {
   color: red;
   opacity: 0.5;
 }
+form span {
+  position: relative;
+}
 form span.field-validation-error {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
   font-size: 0.8rem;
+}
+form span.field-validation-error::after {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 10;
+  font-size: 2em;
+  display: block;
+  content: "⮿";
 }
 
 body {

@@ -16,20 +16,40 @@ form {
         margin: 1rem 0;
     }
 
-    .checkbox-group {
+    .checkbox {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
+        position: relative;
 
-        input[Type="checkbox"] {
-            height: 1.2rem;
-            width: 1.2rem;
+        .field-validation-error {
+            width: 100%;
+
+            &::after {
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                z-index: 10;
+                font-size: 2em;
+                display: block;
+                content: '\2BBF';
+            }
         }
 
-        label {
-            font-weight: 400;
-            margin: 0;
+        .input-group {
+            display: flex;
+            align-items: center;
+
+            #label-terms {
+                margin: 0 0 0 0.5rem;
+                font-weight: 400;
+            }
+
+            input[type="checkbox"] {
+                height: 1.2rem;
+                width: 1.2rem;
+            }
         }
     }
 
@@ -60,12 +80,24 @@ form {
 
 
     span {
+        position: relative;
+
         &.field-validation-error {
             position: absolute;
             top: 0;
             right: 0;
             color: red;
             font-size: 0.8rem;
+
+            &::after {
+                position: absolute;
+                right: 10px;
+                top: 40px;
+                z-index: 10;
+                font-size: 2em;
+                display: block;
+                content: '\2BBF';
+            }
         }
     }
 }
