@@ -9,7 +9,7 @@ public class AccountDetailsAddressInfoModel
     public string Addressline_1 { get; set; } = null!;
 
 
-    [Display(Name = "Address line 2", Prompt = "Enter your second address line")]
+    [Display(Name = "Address line 2", Prompt = "Enter your second address line (optional)")]
     public string? Addressline_2 { get; set; }
 
 

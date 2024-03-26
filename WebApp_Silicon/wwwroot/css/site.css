@@ -203,6 +203,15 @@ form span.field-validation-error::after {
   content: "⮿";
 }
 
+.alert {
+  background: #cc8783;
+  border: 1px solid red;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 15px;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   background-color: white;
@@ -242,6 +251,9 @@ header .container #menu a:hover {
 header .container .btn-switch {
   align-items: center;
   vertical-align: center;
+}
+header .container .account-buttons .btn-theme {
+  margin-right: 10px;
 }
 header .container .account-buttons .btn-gray {
   margin-right: 10px;
@@ -589,39 +601,48 @@ footer .container p {
   font-size: 40px;
   font-weight: 900;
 }
-#newsletter .container .sign-up-content {
+#newsletter .container #subscribeForm .sign-up-content {
   display: flex;
   margin-top: 50px;
 }
-#newsletter .container .sign-up-content .sign-up-box {
+#newsletter .container #subscribeForm .sign-up-content .sign-up-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
   border-radius: 10px;
   border: 1px solid #B4B7C9;
   background-color: #FFF; /* vit bakgrund */
   width: 80%;
 }
-#newsletter .container .sign-up-content .sign-up-box .sign-up {
+#newsletter .container #subscribeForm .sign-up-content .sign-up-box .sign-up {
   display: flex;
   align-items: center;
   border: none;
   width: 100%;
   color: #565973;
 }
-#newsletter .container .sign-up-content .sign-up-box .sign-up i {
+#newsletter .container #subscribeForm .sign-up-content .sign-up-box .sign-up i {
   margin-left: 15px;
   margin-right: 10px;
   color: #565973; /* ikonfärg */
 }
-#newsletter .container .sign-up-content .sign-up-box .sign-up .email-input {
+#newsletter .container #subscribeForm .sign-up-content .sign-up-box .sign-up .email-input {
   border: none;
   outline: none;
   width: 100%;
 }
-#newsletter .container .sign-up-content .btn-subscribe {
+#newsletter .container #subscribeForm .sign-up-content .btn-subscribe {
   margin-left: 30px;
+}
+#newsletter .container #subscribeForm .errorMessage {
+  color: red;
+  margin-top: 10px;
+  font-weight: 700;
+}
+#newsletter .container #subscribeForm .successMessage {
+  color: green;
+  margin-top: 10px;
+  font-weight: 700;
 }
 #newsletter .container .content {
   display: flex;
@@ -750,6 +771,7 @@ footer .container p {
   position: relative;
   box-shadow: 0px 0px 5px rgb(225, 225, 225);
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 #courses .container .course-box:hover {
   transform: scale(1.02);
@@ -901,6 +923,15 @@ footer .container p {
   height: 100%;
   width: 30%;
 }
+#signin .container form .incorrect-text {
+  color: #fff;
+  background-color: #ff9191;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid red;
+  text-align: center;
+}
 #signin .container form .content {
   display: grid;
   gap: 0 2rem;
@@ -972,4 +1003,213 @@ footer .container p {
 }
 #signup .container form .btn-theme {
   box-shadow: 0px 8px 18px -8px #6366F1;
+}
+
+#account-details {
+  padding-top: 70px;
+  background-color: white;
+  height: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+#account-details .container {
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+#account-details .container aside {
+  flex: 1;
+  height: 100%;
+  border-right: 1px solid #B4B7C9;
+}
+#account-details .container aside .user-box {
+  margin-right: 2rem;
+  text-align: center;
+  height: 100%;
+}
+#account-details .container aside .user-box .profile-image-container {
+  position: relative;
+  display: inline-block;
+}
+#account-details .container aside .user-box .profile-image-container img {
+  width: 150px;
+  height: auto;
+}
+#account-details .container aside .user-box .upload-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 15px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #B4B7C9;
+  background-color: white;
+  color: #0B0F19;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+#account-details .container aside .user-box .upload-btn:hover {
+  transform: rotate(180deg);
+}
+#account-details .container aside .user-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 900;
+}
+#account-details .container aside .user-box p {
+  color: #565973;
+  font-weight: 500;
+}
+#account-details .container aside .user-box .btn-account-details {
+  display: block;
+  background-color: #6366F1;
+  padding: 10px 20px 10px 30px;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  text-align: left;
+  box-shadow: 0px 8px 18px -8px #6366F1;
+  font-weight: 600;
+  text-decoration: none;
+}
+#account-details .container aside .user-box .btn-account-details i {
+  margin-right: 15px;
+}
+#account-details .container aside .user-box .btn-signout {
+  display: block;
+  margin-top: 10px;
+  background-color: transparent;
+  padding: 10px 20px 10px 30px;
+  width: 100%;
+  color: #33354D;
+  border: none;
+  border-radius: 7px;
+  text-align: left;
+  transition: 0.2s ease;
+  font-weight: 600;
+  text-decoration: none;
+}
+#account-details .container aside .user-box .btn-signout:hover {
+  background-color: #6366F1;
+  box-shadow: 0px 8px 18px -8px #6366F1;
+  color: white;
+  transition: 0.2s;
+}
+#account-details .container aside .user-box .btn-signout i {
+  margin-right: 15px;
+  color: #9397AD;
+}
+#account-details .container .account-information {
+  flex: 3;
+  padding-left: 100px;
+}
+#account-details .container .account-information #basic-info-form {
+  padding-bottom: 20px;
+}
+#account-details .container .account-information #basic-info-form h5 {
+  margin-top: 20px;
+  color: #6366F1;
+  font-weight: 700;
+}
+#account-details .container .account-information #basic-info-form .form-content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+#account-details .container .account-information #basic-info-form .form-content #form-biography {
+  grid-column: 1/-1;
+}
+#account-details .container .account-information #basic-info-form .form-content #form-biography textarea {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+  border: 1px solid #B4B7C9;
+}
+#account-details .container .account-information #basic-info-form .form-content .button-box {
+  margin-top: 25px;
+}
+#account-details .container .account-information #basic-info-form .form-content .button-box .btn-gray {
+  border: none;
+}
+#account-details .container .account-information #basic-info-form .form-content .button-box .btn-theme {
+  width: 40%;
+  margin-left: 15px;
+}
+#account-details .container .account-information #address-info-form {
+  margin-top: 20px;
+  border-top: 1px solid #B4B7C9;
+}
+#account-details .container .account-information #address-info-form h5 {
+  margin-top: 20px;
+  color: #6366F1;
+  font-weight: 700;
+}
+#account-details .container .account-information #address-info-form p {
+  margin-top: 40px;
+}
+#account-details .container .account-information #address-info-form .form-content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "addressline_1 addressline_1" "addressline_2 addressline_2" "postalcode city";
+}
+#account-details .container .account-information #address-info-form .form-content #form-addressline_1 {
+  grid-area: addressline_1;
+}
+#account-details .container .account-information #address-info-form .form-content #form-addressline_2 {
+  grid-area: addressline_2;
+}
+#account-details .container .account-information #address-info-form .form-content #form-postalcode {
+  grid-area: postalcode;
+}
+#account-details .container .account-information #address-info-form .form-content #form-city {
+  grid-area: city;
+}
+#account-details .container .account-information #address-info-form .form-content .button-box {
+  margin-top: 25px;
+}
+#account-details .container .account-information #address-info-form .form-content .button-box .btn-gray {
+  border: none;
+}
+#account-details .container .account-information #address-info-form .form-content .button-box .btn-theme {
+  width: 40%;
+  margin-left: 15px;
+}
+
+#unsubscribe .btn-theme-s {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#unsubscribe .btn-theme-s i {
+  margin-right: 10px;
+}
+#unsubscribe .container {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#unsubscribe .container h1 {
+  margin-top: 20px;
+}
+#unsubscribe .container form {
+  width: 50%;
+  margin-top: 20px;
+}
+#unsubscribe .container form .btn-theme {
+  margin-top: 30px;
+  font-weight: 900;
 }

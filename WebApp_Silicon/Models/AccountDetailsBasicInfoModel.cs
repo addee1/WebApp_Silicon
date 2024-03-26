@@ -4,8 +4,7 @@ namespace WebApp_Silicon.Models;
 public class AccountDetailsBasicInfoModel
 {
 
-    [DataType(DataType.ImageUrl)]
-    public string? ProfileImage {  get; set; }
+    public string UserId { get; set; } = null!;
 
 
     [Display(Name = "First name", Prompt = "Enter your first name")]
@@ -25,9 +24,9 @@ public class AccountDetailsBasicInfoModel
     public string Email { get; set; } = null!;
 
 
-    [Display(Name = "Phone", Prompt = "Enter your phone")]
+    [Display(Name = "Phone", Prompt = "Enter your phone number")]
     [Required(ErrorMessage = "Phone is required")]
-    public string Phone { get; set; } = null!;
+    public string PhoneNumber { get; set; } = null!;
 
 
     [Display(Name = "Bio", Prompt = "Add a short bio...")]

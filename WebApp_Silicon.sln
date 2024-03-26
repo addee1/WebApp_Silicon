@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp_Silicon", "WebApp_Si
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{6355FEBA-26CC-465C-92EB-C4DCC67247B9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_API", "Web_API\Web_API.csproj", "{3795CF20-7DBC-4960-8F87-018366B00994}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure_API", "Infrastructure_API\Infrastructure_API.csproj", "{6877F320-2390-49BC-8CE9-2B905FF6814E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6355FEBA-26CC-465C-92EB-C4DCC67247B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6355FEBA-26CC-465C-92EB-C4DCC67247B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6355FEBA-26CC-465C-92EB-C4DCC67247B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3795CF20-7DBC-4960-8F87-018366B00994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3795CF20-7DBC-4960-8F87-018366B00994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3795CF20-7DBC-4960-8F87-018366B00994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3795CF20-7DBC-4960-8F87-018366B00994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6877F320-2390-49BC-8CE9-2B905FF6814E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6877F320-2390-49BC-8CE9-2B905FF6814E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6877F320-2390-49BC-8CE9-2B905FF6814E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6877F320-2390-49BC-8CE9-2B905FF6814E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
