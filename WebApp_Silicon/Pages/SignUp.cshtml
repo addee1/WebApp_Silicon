@@ -7,6 +7,9 @@
 
 <section id="signup">
     <div class="container">
+        <div>
+            @ViewData["ErrorMessage"]
+        </div>
 
         <form method="post" novalidate>
             <h1>Create Account</h1>
@@ -47,7 +50,7 @@
                         <span asp-validation-for="@Model.Form.Terms"></span>
                     </div>
                 </div>
-                <button id="form-button" class="btn-theme">Sign Up</button>
+                <button id="form-button" class="btn-theme" type="submit">Sign Up</button>
             </div>
         </form>
     </div>

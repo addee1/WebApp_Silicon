@@ -1,13 +1,22 @@
 ﻿@using WebApp_Silicon.Pages.Components
+@inject SignInManager<UserEntity> _signInManager
+
+
 <header>
     <div class="container">
         <a id="logo" href="/Index"><img src="./images/silicon-logo.svg" alt=""></a>
         <div id="menu">
             <nav>
                 <a class="" href="/Index">Overview</a>
-                <a class="" href="#features">Features</a>
+                @if (!_signInManager.IsSignedIn(User))
+                {
+                    <a class="" href="#features">Features</a>
+                }
+                @if (_signInManager.IsSignedIn(User))
+                {
+                    <a class="" asp-page="/Courses">Courses</a>
+                }
                 <a class="" href="#footer">Contact</a>
-                <a class="" asp-page="/Courses">Courses</a>
             </nav>
         </div>
         <div class="btn-switch">
@@ -19,8 +28,18 @@
             <label>Dark</label>
         </div>
         <div class="account-buttons">
-            <a class="btn-gray" asp-page="/signin"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></a>
-            <a class="btn-theme" asp-page="/signup"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
+            @if (_signInManager.IsSignedIn(User))
+            {
+
+                <a class="btn-theme" asp-page="/signup"><i class="fa-solid fa-user"></i><span>Details</span></a>
+                <a asp-page="/account" asp-page-handler="SignOut" class="btn-gray"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+
+            }
+            else
+            {
+                <a class="btn-gray" asp-page="/signin"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></a>
+                <a class="btn-theme" asp-page="/signup"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a>
+            }
         </div>
     </div>
 </header>

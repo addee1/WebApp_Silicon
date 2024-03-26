@@ -15,48 +15,51 @@ body{
 }
 
 
-header{
+header {
     font-family: 'Manrope', sans-serif;
     padding: 15px;
-    
 
-    .container{
+
+    .container {
         display: grid;
         align-items: center;
         grid-template-columns: auto 1fr auto auto;
         grid-template-areas: "logo menu switch buttons";
         gap: 40px;
-        
-
-        #menu{
 
 
-            a{
+        #menu {
+
+
+            a {
                 color: #33354D;
                 text-decoration: none;
                 font-weight: 600;
                 margin-left: 20px;
                 transition: 0.3s ease;
 
-                &:hover{
-                    color:#6366F1;
+                &:hover {
+                    color: #6366F1;
                     transition: 0.3s ease;
                 }
             }
         }
 
-        .btn-switch{
+        .btn-switch {
             align-items: center;
             vertical-align: center;
         }
 
 
-        .account-buttons{
-        
-            .btn-gray{
+        .account-buttons {
+            .btn-theme{
+                margin-right: 10px;
+
+            }
+            
+            .btn-gray {
                 margin-right: 10px;
             }
         }
-       
     }
 }

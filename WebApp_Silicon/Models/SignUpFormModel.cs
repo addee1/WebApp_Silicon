@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using WebApp_Silicon.Helpers;
-
 
 namespace WebApp_Silicon.Models;
 
 public class SignUpFormModel
 {
     [DataType(DataType.Text)]
-    [Display(Name="First name", Prompt = "Enter your first name")]
+    [Display(Name = "First name", Prompt = "Enter your first name")]
     [Required(ErrorMessage = "You must enter a first name")]
     [MinLength(2, ErrorMessage = "You must enter a first name")]
     public string FirstName { get; set; } = null!;
@@ -40,7 +38,4 @@ public class SignUpFormModel
     [Display(Name = "I agree to the Terms & Conditions")]
     [CheckBoxRequired(ErrorMessage = "Please accept the terms and condition.")]
     public bool Terms { get; set; } = false;
-
-
 }
-

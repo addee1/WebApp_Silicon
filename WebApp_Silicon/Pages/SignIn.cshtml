@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp_Silicon.Pages.LoginModel
+@model WebApp_Silicon.Pages.SignInModel
 @{
     ViewData["Title"] = "Sign In";
 }
@@ -7,8 +7,18 @@
 
 <section id="signin">
     <div class="container">
+        
+        
 
         <form method="post" novalidate>
+
+            @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
+            {
+                <div class="alert">
+                    @ViewData["ErrorMessage"]
+                </div>
+            }
+
             <h1>Welcome Back</h1>
             <p>Don't have an account yet? <a asp-page="/SignUp">Sign up here</a></p>
 

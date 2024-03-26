@@ -228,18 +228,32 @@
                 </div>
             </div>
         </div>
-        <div class="sign-up-content">
-            <div class="sign-up-box">
-                <div class="sign-up">
-                    <i class="fa-regular fa-envelope"></i>
-                    <input id="email" type="email" placeholder="Your Email" class="email-input">
+        <form method="post" id="subscribeForm">
+            <div class="sign-up-content">
+                <div class="sign-up-box">
+                    <div class="sign-up">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input id="email" type="email" asp-for="Subscriber.Email" placeholder="Your Email" class="email-input">
+                    </div>
                 </div>
+                <button type="submit" class="btn-subscribe">Subscribe *</button>
             </div>
-            <a href="#" class="btn-subscribe">Subscribe *</a>
-        </div>
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="successMessage">@TempData["SuccessMessage"].ToString()</div>
+            }
+            else if (TempData["ErrorMessage"] != null)
+            {
+                <div class="errorMessage">@TempData["ErrorMessage"].ToString()</div>
+            }
+        </form>
+        
         <div class="policy-text">
             <p id="blue-star">*</p>
             <p>Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+        </div>
+        <div class="manage-subscription">
+            <p>Manage your subscriptions <a asp-page="/Unsubscribe">here</a></p>
         </div>
     </div>
 </section>

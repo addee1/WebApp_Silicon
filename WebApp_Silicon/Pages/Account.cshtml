@@ -1,0 +1,99 @@
+﻿@page
+@model WebApp_Silicon.Pages.AccountModel
+@{
+    ViewData["Title"] = $"{Model.ProfileInfo.FirstName} {Model.ProfileInfo.LastName}";
+}
+
+
+<section id="account-details">
+    <div class="container">
+        <aside>
+            <div class="user-box">
+                <div class="profile-image-container">
+                    <img src="./images/@Model.ProfileInfo.ProfileImageUrl" alt="Profilbild" />
+                    <button type="button" id="upload-button" class="upload-btn">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                    <input type="file" id="file-input" style="display: none;" accept="image/*" onchange="uploadImage()" />
+                </div>
+
+
+                @* <img src="./images/@Model.ProfileInfo.ProfileImageUrl" /> *@
+                <h2>@Model.ProfileInfo.FirstName @Model.ProfileInfo.LastName</h2>
+                <p>@Model.ProfileInfo.Email</p>
+                <a asp-page="/account" class="btn-account-details"><i class="fa-solid fa-gear"></i>Account Details</a>
+                <a asp-page="/account" asp-page-handler="SignOut" class="btn-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+            </div>
+        </aside>
+        <div class="account-information">
+            <form id="basic-info-form" method="post" novalidate>
+                <h1>Account Details</h1>
+                <h5>Baisc Info</h5>
+                <div class="form-content">
+                    <div id="form-firstname" class="input-group">
+                        <label asp-for="@Model.FormBasic.FirstName"></label>
+                        <span asp-validation-for="@Model.FormBasic.FirstName"></span>
+                        <input asp-for="@Model.FormBasic.FirstName">
+                    </div>
+                    <div id="form-lastname" class="input-group">
+                        <label asp-for="@Model.FormBasic.LastName"></label>
+                        <span asp-validation-for="@Model.FormBasic.LastName"></span>
+                        <input asp-for="@Model.FormBasic.LastName">
+                    </div>
+                    <div id="form-email" class="input-group">
+                        <label asp-for="@Model.FormBasic.Email"></label>
+                        <span asp-validation-for="@Model.FormBasic.Email"></span>
+                        <input asp-for="@Model.FormBasic.Email">
+                    </div>
+                    <div id="form-phone" class="input-group">
+                        <label asp-for="@Model.FormBasic.PhoneNumber"></label>
+                        <span asp-validation-for="@Model.FormBasic.PhoneNumber"></span>
+                        <input asp-for="@Model.FormBasic.PhoneNumber">
+                    </div>
+                    <div id="form-biography" class="input-group">
+                        <label asp-for="@Model.FormBasic.Biography"></label>
+                        <textarea rows="5" asp-for="@Model.FormBasic.Biography"></textarea>
+                    </div>
+                    <div class="button-box">
+                        <button type="button" id="form-button-save" class="btn-gray">Cancel</button>
+                        <button type="submit" id="form-button-cancel" class="btn-theme" asp-page-handler="SaveBasicInfo">Save changes</button>
+                    </div>
+                </div>
+            </form>
+
+            <form id="address-info-form" method="post" novalidate>
+                <h5>Address</h5>
+
+                <div class="form-content">
+                    <div id="form-addressline_1" class="input-group">
+                        <label asp-for="@Model.FormAddress.Addressline_1"></label>
+                        <span asp-validation-for="@Model.FormAddress.Addressline_1"></span>
+                        <input asp-for="@Model.FormAddress.Addressline_1">
+                    </div>
+                    <div id="form-addressline_2" class="input-group">
+                        <label asp-for="@Model.FormAddress.Addressline_2"></label>
+                        <span asp-validation-for="@Model.FormAddress.Addressline_2"></span>
+                        <input asp-for="@Model.FormAddress.Addressline_2">
+                    </div>
+                    <div id="form-postalcode" class="input-group">
+                        <label asp-for="@Model.FormAddress.PostalCode"></label>
+                        <span asp-validation-for="@Model.FormAddress.PostalCode"></span>
+                        <input asp-for="@Model.FormAddress.PostalCode">
+                    </div>
+                    <div id="form-city" class="input-group">
+                        <label asp-for="@Model.FormAddress.City"></label>
+                        <span asp-validation-for="@Model.FormAddress.City"></span>
+                        <input asp-for="@Model.FormAddress.City">
+                    </div>
+                    <div class="button-box">
+                        <button id="form-button-save" class="btn-gray">Cancel</button>
+                        <button id="form-button-cancel" class="btn-theme" asp-page-handler="SaveAddressInfo"> Save changes</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+@* @await Html.PartialAsync("_UploadProfilePictureScriptPartial") *@
