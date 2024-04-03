@@ -3,4 +3,5 @@
 @using Infrastructure.Entities
 @namespace WebApp_Silicon.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@inject UserManager<UserEntity> UserManager
+@inject SignInManager<UserEntity> SignInManager

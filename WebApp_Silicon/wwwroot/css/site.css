@@ -1029,13 +1029,15 @@ footer .container p {
   text-align: center;
   height: 100%;
 }
-#account-details .container aside .user-box .profile-image-container {
+#account-details .container aside .user-box .profile-image-box {
   position: relative;
   display: inline-block;
+  border-radius: 50%;
 }
-#account-details .container aside .user-box .profile-image-container img {
+#account-details .container aside .user-box .profile-image-box img {
   width: 150px;
   height: auto;
+  border-radius: 50%;
 }
 #account-details .container aside .user-box .upload-btn {
   position: absolute;

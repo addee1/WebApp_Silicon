@@ -2,25 +2,29 @@
 @model WebApp_Silicon.Pages.AccountModel
 @{
     ViewData["Title"] = $"{Model.ProfileInfo.FirstName} {Model.ProfileInfo.LastName}";
+    var user = await UserManager.GetUserAsync(User);
 }
+
 
 
 <section id="account-details">
     <div class="container">
         <aside>
             <div class="user-box">
-                <div class="profile-image-container">
-                    <img src="./images/@Model.ProfileInfo.ProfileImageUrl" alt="Profilbild" />
-                    <button type="button" id="upload-button" class="upload-btn">
-                        <i class="fa-solid fa-rotate"></i>
-                    </button>
-                    <input type="file" id="file-input" style="display: none;" accept="image/*" onchange="uploadImage()" />
+                <div class="profile-image-box">
+                    <img src="~/uploads/@user.ProfileImage" alt="profile image" />
+                    
+                    <form enctype="multipart/form-data" method="post" asp-page-handler="UploadImage">
+                        <input id="uploadFile" type="file" name="file" hidden />
+                        <label for="uploadFile" class="upload-btn"><i class="fa-solid fa-arrows-rotate"></i></label>
+                    </form>
+                    
                 </div>
 
 
                 @* <img src="./images/@Model.ProfileInfo.ProfileImageUrl" /> *@
-                <h2>@Model.ProfileInfo.FirstName @Model.ProfileInfo.LastName</h2>
-                <p>@Model.ProfileInfo.Email</p>
+                <h2>@user.FirstName @user.LastName</h2>
+                <p>@user.Email</p>
                 <a asp-page="/account" class="btn-account-details"><i class="fa-solid fa-gear"></i>Account Details</a>
                 <a asp-page="/account" asp-page-handler="SignOut" class="btn-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
             </div>

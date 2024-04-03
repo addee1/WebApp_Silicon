@@ -19,6 +19,7 @@ builder.Services.AddDefaultIdentity<UserEntity>(x =>
 }).AddEntityFrameworkStores<DataContext>();
 
 builder.Services.AddScoped<AddressManager>();
+builder.Services.AddScoped<AccountManager>();
 
 
 

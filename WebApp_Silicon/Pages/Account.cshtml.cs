@@ -17,14 +17,16 @@ public partial class AccountModel : PageModel
     private readonly SignInManager<UserEntity> _signInManager;
     private readonly UserManager<UserEntity> _userManager;
     private readonly AddressManager _addressManager;
+    private readonly AccountManager _accountManager;
 
 
 
-    public AccountModel(SignInManager<UserEntity> signInManager, UserManager<UserEntity> userManager, AddressManager addressManager)
+    public AccountModel(SignInManager<UserEntity> signInManager, UserManager<UserEntity> userManager, AddressManager addressManager, AccountManager accountManager)
     {
         _signInManager = signInManager;
         _userManager = userManager;
         _addressManager = addressManager;
+        _accountManager = accountManager;
     }
 
     [BindProperty]
@@ -33,6 +35,7 @@ public partial class AccountModel : PageModel
     [BindProperty]
     public AccountDetailsAddressInfoModel FormAddress { get; set; } = new AccountDetailsAddressInfoModel();
 
+    [BindProperty]
     public ProfileInfoModel ProfileInfo { get; set; } = new ProfileInfoModel();
 
 
@@ -41,6 +44,8 @@ public partial class AccountModel : PageModel
         FormBasic = await PopulateBasicInfoFormAsync() ?? new AccountDetailsBasicInfoModel();
         ProfileInfo = await PopulateProfileInfoAsync() ?? new ProfileInfoModel();
         FormAddress = await PopulateAddressInfoFormAsync() ?? new AccountDetailsAddressInfoModel();
+
+
 
     }
 
@@ -142,11 +147,11 @@ public partial class AccountModel : PageModel
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
             {
-                // Om du vill visa något meddelande om att uppdateringen lyckades, kan du göra det här
+                
             }
             else
             {
-                // Hantera fel här
+                
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
@@ -173,8 +178,16 @@ public partial class AccountModel : PageModel
             return RedirectToPage("/Account");
         }
 
-        // Anropa den nya metoden för att uppdatera eller skapa en adress
+        
         await _addressManager.UpdateOrCreateAddressAsync(user.Id, FormAddress.Addressline_1, FormAddress.PostalCode, FormAddress.City);
+
+        return RedirectToPage("/Account");
+    }
+
+
+    public async Task<IActionResult> OnPostUploadImage(IFormFile file)
+    {
+        var result = await _accountManager.UploadUserProfileImageAsync(User, file);
 
         return RedirectToPage("/Account");
     }
@@ -233,6 +246,7 @@ public partial class AccountModel : PageModel
         var user = await _userManager.GetUserAsync(User);
         if (user != null)
         {
+
             return new ProfileInfoModel
             {
                 FirstName = user.FirstName,
