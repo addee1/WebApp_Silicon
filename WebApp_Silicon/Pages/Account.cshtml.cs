@@ -197,7 +197,7 @@ public partial class AccountModel : PageModel
 
 
 
-    // Populate -------------------------------------------------------------------------
+    // Populate ------------------------------------------------------------------
     private async Task<AccountDetailsBasicInfoModel> PopulateBasicInfoFormAsync()
     {
         var user = await _userManager.GetUserAsync(User);
